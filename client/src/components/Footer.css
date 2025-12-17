@@ -1,0 +1,132 @@
+.app-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--md-space-2) var(--md-space-6);
+  background: var(--md-sys-color-surface);
+  border-top: 1px solid var(--md-sys-color-outline-variant);
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.footer-content {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: var(--md-space-3);
+  width: 100%;
+}
+
+.footer-social {
+  display: flex;
+  gap: var(--md-space-3);
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--md-sys-color-surface-variant);
+  color: var(--md-sys-color-on-surface-variant);
+  transition: all var(--md-motion-duration-short2) var(--md-motion-easing-standard);
+  text-decoration: none;
+}
+
+.social-link:hover {
+  background: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--md-elevation-level2);
+}
+
+.social-link:focus {
+  outline: 2px solid var(--md-sys-color-primary);
+  outline-offset: 2px;
+}
+
+.social-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.footer-powered {
+  display: flex;
+  align-items: center;
+  gap: var(--md-space-2);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.footer-profile-image {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid var(--md-sys-color-outline-variant);
+  transition: all var(--md-motion-duration-short2) var(--md-motion-easing-standard);
+}
+
+.footer-powered:hover .footer-profile-image {
+  border-color: var(--md-sys-color-primary);
+  box-shadow: 0 0 0 2px rgba(41, 98, 255, 0.2);
+}
+
+.footer-text {
+  font-size: 0.875rem;
+  color: var(--md-sys-color-on-surface-variant);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .app-footer {
+    padding: var(--md-space-2) var(--md-space-3);
+  }
+
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--md-space-2);
+  }
+
+  .footer-social {
+    gap: var(--md-space-1);
+  }
+
+  .footer-powered {
+    gap: var(--md-space-1);
+  }
+
+  .footer-text {
+    font-size: 0.8125rem;
+  }
+
+  .footer-profile-image {
+    width: 28px;
+    height: 28px;
+  }
+
+  .social-link {
+    width: 28px;
+    height: 28px;
+  }
+
+  .social-icon {
+    width: 14px;
+    height: 14px;
+  }
+}
+

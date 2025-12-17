@@ -1,0 +1,371 @@
+/* Material Design 3.0 - Dark Theme (Final Review) */
+:root {
+  /* Material Design 3 Color Tokens - Optimized for Readability */
+  --md-sys-color-primary: #2962ff;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #d6e4ff;
+  --md-sys-color-on-primary-container: #001d35;
+  
+  --md-sys-color-secondary: #625b71;
+  --md-sys-color-on-secondary: #ffffff;
+  --md-sys-color-secondary-container: #e8def8;
+  --md-sys-color-on-secondary-container: #1d192b;
+  
+  --md-sys-color-tertiary: #7d5260;
+  --md-sys-color-on-tertiary: #ffffff;
+  
+  --md-sys-color-error: #ba1a1a;
+  --md-sys-color-on-error: #ffffff;
+  --md-sys-color-error-container: #ffdad6;
+  --md-sys-color-on-error-container: #410002;
+  
+  --md-sys-color-surface: #141218;
+  --md-sys-color-on-surface: #e6e0e9;
+  --md-sys-color-surface-variant: #1e2330;
+  --md-sys-color-on-surface-variant: #c4c7d0;
+  
+  --md-sys-color-outline: #5a6b7f;
+  --md-sys-color-outline-variant: #2a3440;
+  
+  --md-sys-color-inverse-surface: #e6e0e9;
+  --md-sys-color-inverse-on-surface: #322f35;
+  --md-sys-color-inverse-primary: #a8c5ff;
+  
+  /* Status Colors - Enhanced for Better Visibility */
+  --md-sys-color-success: #4caf50;
+  --md-sys-color-success-light: #81c784;
+  --md-sys-color-warning: #ff9800;
+  --md-sys-color-warning-light: #ffb74d;
+  --md-sys-color-info: #2196f3;
+  
+  /* Elevation */
+  --md-elevation-level0: none;
+  --md-elevation-level1: 0px 1px 3px 0px rgba(0, 0, 0, 0.3), 0px 4px 8px 3px rgba(0, 0, 0, 0.15);
+  --md-elevation-level2: 0px 2px 6px 2px rgba(0, 0, 0, 0.3), 0px 8px 12px 4px rgba(0, 0, 0, 0.15);
+  --md-elevation-level3: 0px 4px 8px 3px rgba(0, 0, 0, 0.3), 0px 12px 16px 6px rgba(0, 0, 0, 0.15);
+  --md-elevation-level4: 0px 6px 12px 4px rgba(0, 0, 0, 0.3), 0px 16px 24px 8px rgba(0, 0, 0, 0.15);
+  --md-elevation-level5: 0px 8px 16px 6px rgba(0, 0, 0, 0.3), 0px 20px 32px 10px rgba(0, 0, 0, 0.15);
+  
+  /* Spacing (8px grid) */
+  --md-space-1: 8px;
+  --md-space-2: 16px;
+  --md-space-3: 24px;
+  --md-space-4: 32px;
+  --md-space-5: 40px;
+  --md-space-6: 48px;
+  
+  /* Typography */
+  --md-font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --md-font-family-mono: 'Roboto Mono', 'Courier New', monospace;
+  
+  /* Border Radius */
+  --md-shape-corner-extra-small: 4px;
+  --md-shape-corner-small: 8px;
+  --md-shape-corner-medium: 12px;
+  --md-shape-corner-large: 16px;
+  --md-shape-corner-extra-large: 28px;
+  
+  /* Animation */
+  --md-motion-duration-short1: 50ms;
+  --md-motion-duration-short2: 100ms;
+  --md-motion-duration-short3: 150ms;
+  --md-motion-duration-short4: 200ms;
+  --md-motion-duration-medium1: 250ms;
+  --md-motion-duration-medium2: 300ms;
+  --md-motion-duration-medium3: 350ms;
+  --md-motion-duration-medium4: 400ms;
+  --md-motion-duration-long1: 450ms;
+  --md-motion-duration-long2: 500ms;
+  --md-motion-duration-long3: 550ms;
+  --md-motion-duration-long4: 600ms;
+  
+  --md-motion-easing-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --md-motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--md-font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  line-height: 1.5;
+}
+
+.App {
+  min-height: 100vh;
+  background: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Material Design 3 App Bar */
+.App-header {
+  background: var(--md-sys-color-surface);
+  padding: var(--md-space-3) var(--md-space-4);
+  border-bottom: 1px solid var(--md-sys-color-outline-variant);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--md-space-2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--md-elevation-level1);
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: var(--md-space-2);
+}
+
+.a41-logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: opacity var(--md-motion-duration-short2) var(--md-motion-easing-standard);
+}
+
+.a41-logo-link:hover {
+  opacity: 0.8;
+}
+
+.a41-logo {
+  height: 33px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.App-header h1 {
+  font-size: 2.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: var(--md-sys-color-on-surface);
+  line-height: 1.5;
+}
+
+.header-info {
+  display: flex;
+  gap: var(--md-space-2);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.exit-queue-header {
+  display: flex;
+  gap: var(--md-space-2);
+  align-items: center;
+  padding: 8px var(--md-space-2);
+  background: var(--md-sys-color-surface-variant);
+  border-radius: var(--md-shape-corner-small);
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 0.875rem;
+  font-weight: 400;
+  transition: all var(--md-motion-duration-short4) var(--md-motion-easing-standard);
+  line-height: 1.4;
+}
+
+.exit-queue-header:hover {
+  background: rgba(73, 69, 79, 0.6);
+}
+
+.exit-queue-header span {
+  font-weight: 500;
+  white-space: nowrap;
+  color: var(--md-sys-color-on-surface);
+}
+
+.last-update {
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 0.875rem;
+  padding: 8px var(--md-space-2);
+  background: var(--md-sys-color-surface-variant);
+  border-radius: var(--md-shape-corner-small);
+  font-weight: 400;
+  white-space: nowrap;
+  transition: all var(--md-motion-duration-short4) var(--md-motion-easing-standard);
+  line-height: 1.4;
+}
+
+.last-update:hover {
+  background: rgba(73, 69, 79, 0.6);
+  color: var(--md-sys-color-on-surface);
+}
+
+/* Material Design 3 Button */
+.sync-button {
+  padding: 10px var(--md-space-3);
+  background: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  border: none;
+  border-radius: var(--md-shape-corner-large);
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: var(--md-font-family);
+  cursor: pointer;
+  transition: all var(--md-motion-duration-short4) var(--md-motion-easing-emphasized);
+  box-shadow: var(--md-elevation-level1);
+  text-transform: none;
+  letter-spacing: 0.01em;
+  position: relative;
+  overflow: hidden;
+  line-height: 1.4;
+}
+
+.sync-button:hover:not(:disabled) {
+  box-shadow: var(--md-elevation-level2);
+  transform: translateY(-1px);
+}
+
+.sync-button:active:not(:disabled) {
+  box-shadow: var(--md-elevation-level1);
+  transform: translateY(0);
+}
+
+.sync-button:disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+  box-shadow: var(--md-elevation-level0);
+}
+
+.sync-button:focus-visible {
+  outline: 2px solid var(--md-sys-color-primary);
+  outline-offset: 2px;
+}
+
+.App-main {
+  padding: var(--md-space-4);
+  padding-bottom: calc(var(--md-space-4) + 60px); /* Footer height + padding */
+  max-width: 1600px;
+  margin: 0 auto;
+  animation: fadeIn var(--md-motion-duration-medium4) var(--md-motion-easing-standard);
+  flex: 1;
+}
+
+.tabs {
+  display: flex;
+  gap: var(--md-space-2);
+  margin-bottom: var(--md-space-4);
+  border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.tab-button {
+  background: transparent;
+  border: none;
+  padding: var(--md-space-2) var(--md-space-4);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--md-sys-color-on-surface-variant);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all var(--md-motion-duration-short2) var(--md-motion-easing-standard);
+  margin-bottom: -1px;
+}
+
+.tab-button:hover {
+  color: var(--md-sys-color-on-surface);
+  background: rgba(41, 98, 255, 0.05);
+}
+
+.tab-button.active {
+  color: var(--md-sys-color-primary);
+  border-bottom-color: var(--md-sys-color-primary);
+}
+
+.exit-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--md-space-4);
+  margin-bottom: var(--md-space-4);
+  flex-wrap: wrap;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loading {
+  text-align: center;
+  padding: var(--md-space-6);
+  font-size: 1rem;
+  color: var(--md-sys-color-on-surface-variant);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--md-space-2);
+}
+
+.loading::after {
+  content: '';
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--md-sys-color-outline-variant);
+  border-top-color: var(--md-sys-color-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error-message {
+  background: var(--md-sys-color-error-container);
+  border: 1px solid var(--md-sys-color-error);
+  color: var(--md-sys-color-on-error-container);
+  padding: var(--md-space-2) var(--md-space-3);
+  border-radius: var(--md-shape-corner-medium);
+  margin-bottom: var(--md-space-3);
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  box-shadow: var(--md-elevation-level1);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .App-header {
+    padding: var(--md-space-2);
+  }
+
+  .header-title {
+    gap: var(--md-space-1);
+  }
+
+  .a41-logo {
+    height: 27px;
+  }
+
+  .App-header h1 {
+    font-size: 1.6875rem;
+    font-weight: 600;
+  }
+
+  .App-main {
+    padding: var(--md-space-2);
+  }
+  
+  .header-info {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

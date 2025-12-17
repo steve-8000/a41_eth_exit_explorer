@@ -1,0 +1,108 @@
+.exit-csv-upload-container {
+  background: var(--md-sys-color-surface);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  border-radius: var(--md-shape-corner-large);
+  padding: var(--md-space-3);
+  margin-bottom: var(--md-space-4);
+  box-shadow: var(--md-elevation-level2);
+  transition: all var(--md-motion-duration-medium2) var(--md-motion-easing-standard);
+  animation: fadeInUp var(--md-motion-duration-medium4) var(--md-motion-easing-standard) 0.1s both;
+}
+
+.exit-csv-upload-form {
+  display: flex;
+  gap: var(--md-space-2);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.file-input-hidden {
+  display: none;
+}
+
+.file-select-button {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px var(--md-space-3);
+  background: var(--md-sys-color-surface-variant);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  border-radius: var(--md-shape-corner-small);
+  color: var(--md-sys-color-on-surface);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all var(--md-motion-duration-short2) var(--md-motion-easing-standard);
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-select-button:hover:not(:disabled) {
+  border-color: var(--md-sys-color-primary);
+  background: var(--md-sys-color-surface);
+}
+
+.file-select-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.upload-button {
+  background: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  border: none;
+  padding: 10px var(--md-space-4);
+  border-radius: var(--md-shape-corner-small);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--md-motion-duration-short2) var(--md-motion-easing-standard);
+  box-shadow: var(--md-elevation-level1);
+}
+
+.upload-button:hover:not(:disabled) {
+  background: var(--md-sys-color-primary);
+  box-shadow: var(--md-elevation-level2);
+  transform: translateY(-1px);
+}
+
+.upload-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  box-shadow: var(--md-elevation-level0);
+}
+
+.upload-message-inline {
+  padding: 6px var(--md-space-2);
+  border-radius: var(--md-shape-corner-small);
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+}
+
+.upload-message-inline.success {
+  background: rgba(76, 175, 80, 0.2);
+  color: var(--md-sys-color-success);
+  border: 1px solid var(--md-sys-color-success);
+}
+
+.upload-message-inline.error {
+  background: var(--md-sys-color-error-container);
+  color: var(--md-sys-color-on-error-container);
+  border: 1px solid var(--md-sys-color-error);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

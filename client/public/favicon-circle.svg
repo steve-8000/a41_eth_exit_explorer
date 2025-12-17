@@ -1,0 +1,17 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="circleClip">
+      <circle cx="16" cy="16" r="16"/>
+    </clipPath>
+    <mask id="circleMask">
+      <rect width="32" height="32" fill="white"/>
+      <circle cx="16" cy="16" r="16" fill="black"/>
+    </mask>
+  </defs>
+  <circle cx="16" cy="16" r="16" fill="#2962ff"/>
+  <image href="https://cdn.prod.website-files.com/663b58d3805ec350a436dc33/66579c7459a954998a36e594_Favicon-min.jpg" 
+         x="0" y="0" width="32" height="32" 
+         clip-path="url(#circleClip)"
+         preserveAspectRatio="xMidYMid slice"/>
+</svg>
+
